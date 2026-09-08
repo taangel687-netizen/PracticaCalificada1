@@ -1,0 +1,146 @@
+/* ===== index.css ===== */
+body.home {
+  background: #f2f2f5;
+}
+
+.hero {
+  padding: 40px 20px;
+  text-align: center;
+}
+.hero h1 {
+  color: #333;
+  font-size: 1.4rem;
+}
+
+/* ---------- 5.a / 5.b flip cards ---------- */
+.cards-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 10px 20px 60px;
+}
+
+.flip-card {
+  width: 170px;
+  height: 190px;
+  perspective: 900px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+/* giro de 180° sobre eje horizontal Y vertical (rotate3d con x=1 y=1) */
+.flip-card:hover .flip-card-inner {
+  transform: rotate3d(1, 1, 0, 180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.flip-front {
+  background: var(--blue);
+}
+.flip-back {
+  background: var(--green);
+  transform: rotate3d(1, 1, 0, 180deg);
+}
+.flip-back a {
+  color: #fff;
+  padding: 10px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+/* ---------- 5.c formulario de autenticación ---------- */
+.auth-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 90px;
+}
+.auth-card {
+  width: min(360px, 92vw);
+  background: var(--dark-panel);
+  border: 3px solid var(--purple);
+  border-radius: 12px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  box-shadow: 0 20px 45px rgba(108, 60, 233, 0.25);
+}
+
+.auth-field {
+  position: relative;
+}
+.auth-field input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-light);
+  font-size: 1rem;
+  padding: 18px 4px 10px;
+  outline: none;
+}
+.auth-field label {
+  position: absolute;
+  left: 4px;
+  top: 16px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+.auth-field input:focus ~ label,
+.auth-field input:not(:placeholder-shown) ~ label {
+  top: -2px;
+  font-size: 0.7rem;
+}
+.auth-field input:focus {
+  border-bottom-color: var(--aqua);
+}
+
+.auth-field.invalid label {
+  color: var(--red);
+}
+.auth-field.invalid input {
+  border-bottom-color: var(--red);
+}
+.auth-error {
+  color: var(--red);
+  font-size: 0.75rem;
+  margin-top: 6px;
+  display: none;
+}
+.auth-field.invalid .auth-error {
+  display: block;
+}
+
+.auth-submit {
+  background: #9fd8a6;
+  color: #1c3d20;
+  border: none;
+  border-radius: 6px;
+  padding: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.auth-submit:hover {
+  background: #8fcf98;
+}

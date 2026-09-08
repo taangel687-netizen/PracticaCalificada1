@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body class="home">
+    <nav class="top-nav">
+      <span class="brand">PC1 · DAW</span>
+      <a href="index.html">Inicio</a>
+      <a href="page01.html">Page01</a>
+      <a href="page02.html">Page02</a>
+      <a href="page03.html">Page03</a>
+    </nav>
+
+    <div class="hero">
+      <h1>Página Principal</h1>
+    </div>
+
+    <!-- ================= 5.a / 5.b Cards animados con flip ================= -->
+    <div class="cards-strip">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">page1</div>
+          <div class="flip-back"><a href="page01.html">Ir a Page1</a></div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">page2</div>
+          <div class="flip-back"><a href="page02.html">Ir a Page2</a></div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-front">page3</div>
+          <div class="flip-back"><a href="page03.html">Ir a Page3</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 5.c Formulario de autenticación ================= -->
+    <div class="auth-wrap">
+      <form class="auth-card" id="authForm" novalidate>
+        <div class="auth-field">
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder=" "
+            autocomplete="off"
+            required
+          />
+          <label for="loginEmail">Email</label>
+        </div>
+
+        <div class="auth-field" id="passField">
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder=" "
+            autocomplete="off"
+            required
+          />
+          <label for="loginPassword">Password</label>
+          <div class="auth-error">Field is required</div>
+        </div>
+
+        <button type="submit" class="auth-submit">SIGN IN</button>
+      </form>
+    </div>
+
+    <script>
+      const authForm = document.getElementById("authForm");
+      const passField = document.getElementById("passField");
+      const passInput = document.getElementById("loginPassword");
+
+      authForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (passInput.value.trim() === "") {
+          passField.classList.add("invalid");
+        } else {
+          passField.classList.remove("invalid");
+          alert("Ingreso exitoso (demo).");
+        }
+      });
+
+      passInput.addEventListener("input", () => {
+        if (passInput.value.trim() !== "") {
+          passField.classList.remove("invalid");
+        }
+      });
+    </script>
+  </body>
+</html>
