@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page 03 - Tienda</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/page03.css" />
+  </head>
+  <body class="p3">
+    <nav class="top-nav">
+      <span class="brand">PC1 · DAW</span>
+      <a href="index.html">Inicio</a>
+      <a href="page01.html">Page01</a>
+      <a href="page02.html">Page02</a>
+      <a href="page03.html">Page03</a>
+    </nav>
+
+    <div class="store">
+      <h2 class="section-heading">Lo Más Vendido ⭐</h2>
+
+      <div class="store-tabs">
+        <button class="tab active">DAMAS</button>
+        <button class="tab">CABALLEROS</button>
+        <button class="tab">KIDS</button>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img">Botas Sokso</div>
+          <div class="product-tag">BOTAS SOKSO S/.189 ›</div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">Zapatilla Sokso</div>
+          <div class="product-tag">ZAPATILLA SOKSO S/.119 ›</div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">Zapatos Estela</div>
+          <div class="product-tag">ZAPATOS ESTELA SOKSO S/.279 ›</div>
+        </div>
+        <div class="product-card">
+          <div class="product-img">Zapatos Simik</div>
+          <div class="product-tag">ZAPATOS NIÑA SIMIK S/.149 ›</div>
+        </div>
+      </div>
+
+      <h2 class="section-heading">Grandes Marcas 🌍👟</h2>
+
+      <div class="brands-row">
+        <div class="brand-item">
+          <div class="brand-circle">
+            <svg viewBox="0 0 24 24"><path d="M3 15l4-7 3 5 2-3 3 5h6" /></svg>
+          </div>
+          Adidas Hombre
+        </div>
+        <div class="brand-item">
+          <div class="brand-circle">
+            <svg viewBox="0 0 24 24"><path d="M3 15l4-7 3 5 2-3 3 5h6" /></svg>
+          </div>
+          Adidas Mujer
+        </div>
+        <div class="brand-item">
+          <div class="brand-circle">
+            <svg viewBox="0 0 24 24"><path d="M4 16l6-2 4-6 6 8H4z" /></svg>
+          </div>
+          Nike Hombre
+        </div>
+        <div class="brand-item">
+          <div class="brand-circle">
+            <svg viewBox="0 0 24 24"><path d="M4 16l6-2 4-6 6 8H4z" /></svg>
+          </div>
+          Nike Mujer
+        </div>
+        <div class="brand-item">
+          <div class="brand-circle">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /></svg>
+          </div>
+          Puma Hombre
+        </div>
+        <div class="brand-item">
+          <div class="brand-circle">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /></svg>
+          </div>
+          Puma Mujer
+        </div>
+      </div>
+
+      <div class="banner-row">
+        <div class="banner boots">
+          <span class="banner-title">Botas</span>
+          <span class="banner-btn">ver colección</span>
+        </div>
+        <div class="banner sneakers">
+          <span class="banner-title">Zapatillas</span>
+          <span class="banner-btn">ver colección</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".store-tabs .tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".store-tabs .tab")
+            .forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
