@@ -1,0 +1,58 @@
+/* ===== common.css - variables y reset compartido ===== */
+:root {
+  --dark-bg: #14141c;
+  --dark-panel: #1c1c26;
+  --dark-panel-2: #23232f;
+  --border-subtle: #33333f;
+  --text-light: #f2f2f5;
+  --text-muted: #9a9aa5;
+  --aqua: #4fd8e8;
+  --purple: #6c3ce9;
+  --green: #2ecc71;
+  --blue: #3498db;
+  --red: #e0556f;
+  --radius: 10px;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f2f2f5;
+  color: var(--text-light);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e2e8;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+.top-nav a {
+  color: #333;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+.top-nav a:hover {
+  background: #eee;
+}
+.top-nav .brand {
+  color: var(--purple);
+  font-weight: 800;
+  margin-right: auto;
+}
